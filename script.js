@@ -245,7 +245,7 @@ let goTo = (x) => {
 
 if (backBtn) {
   backBtn.addEventListener("click", () => {
-    window.history.back();
+    window.location.href = "./index.html";
   });
 }
 
