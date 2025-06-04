@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Nunito Sans", sans-serif;
+    background-color: hsl(207, 26%, 17%);
+    color: hsl(0, 100%, 100%);
+    padding-bottom: 5rem;
+}
+body.light{
+    background-color:  hsl(0deg 0% 82.31%);
+    color:  hsl(200, 15%, 8%);
+}
+/* ============================== Header ======================= */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 4rem;
+    background-color: hsl(209, 23%, 22%);
+}
+body.light header{
+   background-color:  hsl(0, 0%, 99%)
+}
+.title{
+    font-weight: bold;
+    font-size: larger;
+}
+.theme{
+    cursor: pointer;
+    user-select: none;
+    padding: 1rem;
+}
+#mode{
+    font-size: small;
+    margin-left: 2px;
+    user-select: none;
+}
+/* ================================ Search Area ============================= */
+.searching{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5rem;
+    padding-block: 2rem;
+}
+.search-wrapper{
+    background-color: hsl(209, 23%, 22%);
+    padding-left: 1rem;
+    border-radius: 6px;
+}
+body.light .search-wrapper{
+    background-color:  hsl(0, 0%, 99%);
+    color:  hsl(200, 15%, 8%);
+    
+}
+#search{
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 100%, 100%);
+    padding-inline: 0.5rem;
+    padding-block: 0.8rem;
+    border: none;
+    min-width: 19rem;
+}
+body.light #search{
+    background-color:  hsl(0, 0%, 99%);
+    color:  hsl(200, 15%, 8%);
+}
+#search:focus{
+    border: none;
+    outline: none;
+}
+#search::placeholder{
+    color: hsl(0, 2%, 84%);
+}
+body.light #search::placeholder{
+    color:  hsl(200, 15%, 8%);
+}
+#region{
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 2%, 84%);
+    padding-inline: 0.5rem;
+    padding-block: 0.8rem;
+    border: none;
+    min-width: 8rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+body.light #region{
+    background-color:  hsl(0, 0%, 99%);
+    color:  hsl(200, 15%, 8%);
+}
+#region:focus{
+    border: none;
+    outline: none;
+}
+/* ============================= Countries ================================= */
+.c-flex{
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 2rem;
+    gap: 4rem;
+    justify-content: center;
+}
+.c-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 12rem;
+    height: 16rem;
+    background-color: hsl(209, 23%, 22%);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+.c-box:hover{
+    transform: scale(1.03);
+}
+body.light .c-box{
+    background-color:  hsl(0, 0%, 99%);
+    box-shadow: -4px 4px 10px;
+}
+.c-image{
+    width: 100%;
+    height: 45%;
+}
+.c-title{
+    padding-inline: 10px;
+    font-weight: bold;
+    font-size: medium;
+}
+.c-details{
+    font-size: small;
+    padding-inline: 10px;
+    margin-bottom: 1.3rem;
+}
+#sun{
+    display: none;
+}
+
+/* ============================================ Country.html =========================================== */
+.btnContainer{
+    padding-inline: 5rem;
+    padding-top: 4rem;
+}
+#backBtn{
+    padding: 8px;
+    border: none;
+    width: 5rem;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 1px -1px 6px rgba(0, 0, 0, 0.6);
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 100%, 100%);
+}
+body.light #backBtn{
+    background-color:  hsl(0, 0%, 99%);
+    color:  hsl(200, 15%, 8%);
+}
+#backBtn:active{
+    transform: scale(0.96);
+}
+.detail-flex{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    font-size: small;
+}
+.full-image{
+    height: 16rem;
+    width: 25rem;
+    opacity: 0;
+    transition: all 1s linear;
+}
+.full-image.observed{
+    opacity: 1;
+}
+body.light .full-image{
+    box-shadow: -3px 2px 10px;
+}
+.full-details{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    width: 54%;
+}
+.full-Title{
+    font-weight: bolder;
+    font-size: x-large;
+}
+.full-info{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.nativeName{
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s ease;
+}
+.nativeName.observed{
+    opacity: 1;
+    transform: translateX(0);
+}
+.bold{
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+}
+.border{
+    display: flex;
+    gap: 1rem;
+}
+.neighbours{
+    border-radius: 2px;
+    padding: 5px;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(209, 23%, 22%);
+    cursor: pointer;
+    user-select: none;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s ease;
+}
+.neighbours.observed{
+    opacity: 1;
+    transform: translateX(0);
+}
+body.light .neighbours{
+    background-color:  hsl(0, 0%, 99%);
+    color:  hsl(200, 15%, 8%);
+}
+.neighbours:active{
+    transform: scale(0.98);
+}
+.circle{
+    padding: 10px;
+    padding-inline: 15px;
+    background-color: hsl(209, 23%, 22%);
+    position: fixed;
+    border-radius: 25px;
+    right: 2rem;
+    cursor: pointer;
+    top: 2rem;
+    display: none;
+}
+.circle.show{
+    display: inline-block;
+}
+body.light .circle{
+    background-color:  hsl(0, 0%, 99%);
+    color:  hsl(200, 15%, 8%);
+}
+/* ================================ Media for index.html ========================================== */
+
+@media (min-width: 506px) and (max-width: 635px){
+    .c-box {
+    width: 15rem;
+    height: 18rem;
+}
+.searching {
+    padding-inline: 1rem;
+    flex-direction: row-reverse;
+}
+}
+
+@media (min-width: 385px) and (max-width: 505px){
+header {
+    padding-inline: 1rem;
+}
+.c-box {
+    width: 15rem;
+    height: 18rem;
+}
+.searching {
+    padding-inline: 1rem;
+    flex-direction: row-reverse;
+}
+#search {
+    min-width: 10rem;
+}
+#region {
+    min-width: 7rem;
+}
+.theme {
+    padding-right: 0;
+}
+.circle {
+    right: 1rem
+}
+}
+
+@media (min-width: 300px) and (max-width: 384px){
+header {
+    padding-inline: 1rem;
+}
+.c-box {
+    width: 15rem;
+    height: 18rem;
+}
+.searching {
+    padding-inline: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+#search {
+    min-width: 10rem;
+}
+#region {
+    min-width: 6rem;
+    width: 9rem;
+}
+.theme {
+    padding-right: 0;
+}
+.circle {
+    right: 0.5rem;
+}
+}
+@media (max-width: 351px){
+.title {
+    font-size: large;
+}
+.theme {
+    padding-right: 0;
+}
+.circle {
+    right: 0.5rem;
+}
+}
+
+/* =================================== Media for country.html ================================================= */
+
+@media (min-width: 506px) and (max-width: 1025px){
+.btnContainer {
+    padding-top: 3rem;
+    padding-inline: 2rem;
+}
+.detail-flex {
+    flex-direction: column;
+    align-items: center;
+}
+.full-details {
+    align-self: flex-start;
+    width: 98%;
+}
+}
+@media (min-width: 385px) and (max-width: 505px){
+.btnContainer {
+    padding-top: 2rem;
+    padding-inline: 2rem;
+}
+.detail-flex {
+    flex-direction: column;
+    align-items: center;
+}
+.full-details {
+    align-self: flex-start;
+    width: 98%;
+    padding-inline: 1rem;
+    gap: 4rem;
+}
+.full-Title {
+    padding-left: 1rem;
+}
+.full-info {
+    justify-content: left;
+}
+.full-image {
+    height: 10rem;
+    width: 16rem;
+}
+}
+@media (min-width: 300px) and (max-width: 384px){
+.btnContainer {
+    padding-top: 2rem;
+    padding-inline: 2rem;
+}
+.detail-flex {
+    flex-direction: column;
+    align-items: center;
+}
+.full-details {
+    align-self: flex-start;
+    width: 98%;
+    padding-inline: 1rem;
+    gap: 2rem;
+}
+.full-Title {
+    padding-left: 1rem;
+}
+.full-image {
+    height: 10rem;
+    width: 16rem;
+}
+.full-info {
+    justify-content: left;
+}
+}
+@media (max-height: 735px){
+        .full-image {
+        height: 8rem;
+        width: 14rem;
+    }
+        .detail-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
