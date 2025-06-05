@@ -131,7 +131,6 @@ const countryCall = async () => {
           
           let borderName = (b) => {
             let reArr = result.filter((f) => f.cca3 === b);
-            console.log(reArr)
             return reArr[0].name.common
           };
 
