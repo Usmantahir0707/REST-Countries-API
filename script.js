@@ -75,7 +75,7 @@ const generateCards = (arr) => {
 // =============================== Fetch API ============================
 
 const countryCall = async () => {
-  let response = await fetch("https://restcountries.com/v3.1/all");
+  let response = await fetch("https://restcountries.com/v3.1/all?fields=flags,name,population,region,subregion,capital,tld,currencies,languages,borders");
   let result = await response.json();
 
   generateCards(result);
