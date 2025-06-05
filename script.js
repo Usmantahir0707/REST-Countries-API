@@ -170,9 +170,9 @@ const countryCall = async () => {
         <div class="border">
           <span class="bold">Border Countries&nbsp;:</span>
           <span onclick="goTo('${
-            x.borders ? borderName(x.borders[0]) : "none"
+            x.borders && x.borders.length >= 1 ? borderName(x.borders[0]) : "none"
           }')" class="neighbours">${
-            x.borders ? borderName(x.borders[0]) : "N/A"
+            x.borders && x.borders.length >= 1 ? borderName(x.borders[0]) : "N/A"
           }</span>
           <span onclick="goTo('${
             x.borders && x.borders.length >= 2
