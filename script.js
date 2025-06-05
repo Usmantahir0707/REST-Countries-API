@@ -130,7 +130,8 @@ const countryCall = async () => {
         .map((x) => {
           let borderName = (b) => {
             let reArr = result.filter((f) => f.cca3 === b);
-            return reArr[0].name.common;
+            console.log(reArr)
+            return reArr.name.common;
           };
 
           return `<div class="detail-flex">
