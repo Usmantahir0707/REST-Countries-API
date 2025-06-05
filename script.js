@@ -58,7 +58,7 @@ const generateCards = (arr) => {
   if (!cardsFlex) return;
   cardsFlex.innerHTML = arr
     .map((x) => {
-      let pop = x.population.toLocalString();
+      let pop = x.population.toLocaleString();
       return `<div class="c-box">
         <img class="c-image" src=${x.flags.png} alt="">
         <div class="c-title">${x.name.common}</div>
