@@ -58,11 +58,12 @@ const generateCards = (arr) => {
   if (!cardsFlex) return;
   cardsFlex.innerHTML = arr
     .map((x) => {
+      let pop = x.population.toLocalString();
       return `<div class="c-box">
         <img class="c-image" src=${x.flags.png} alt="">
         <div class="c-title">${x.name.common}</div>
         <div class="c-details">
-            <p>Population: ${x.population.toLocalString()}</p>
+            <p>Population: ${pop}</p>
             <p>Region: ${x.region}</p>
             <p>Capital: ${x.capital}</p>
         </div>
