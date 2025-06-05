@@ -159,9 +159,6 @@ const countryCall = async () => {
             
           </div>
           <div class="info2">
-            <div class="nativeName"><span class="bold">Top&nbsp;Level&nbsp;Domain&nbsp;:</span><span>${
-              x.tld[0]
-            }</span></div>
             <div class="nativeName"><span class="bold">Currencies&nbsp;:</span><span></span>${
               x.currencies[Object.keys(x.currencies)[0]].symbol
             }, ${x.currencies[Object.keys(x.currencies)[0]].name}</div>
